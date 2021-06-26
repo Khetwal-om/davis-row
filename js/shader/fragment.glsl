@@ -66,7 +66,7 @@ void main(){
   // flip 🐬
   // uv.y=1.0 - uv.y;
 
-  float strength=smoothstep(0.5,0.6,uv.y);
+  float strength=smoothstep(0.5,0.1,uv.y);
 
 
   vec2 surface=strength*vec2(

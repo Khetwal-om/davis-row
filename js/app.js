@@ -252,7 +252,7 @@ export default class Sketch {
   }
 
   render() {
-    this.time += 0.05;
+    this.time += 0.004;
 
     this.scroll.render();
     this.currentScroll = this.scroll.scrollToRender;

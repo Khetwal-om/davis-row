@@ -3,125 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      canvas {
-        display: block;
-      }
-      .page {
-        max-width: 1280px;
-        margin: 0 auto;
-      }
-      .main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-self: center;
-      }
-      h1 {
-        font-size: 15vw;
-        color: #e69683;
-        font-family: 'Calfine Demo';
-      }
-      h2 {
-        font-size: 6vw;
-        color: #e69683;
-        font-family: 'Kenoky';
-        text-transform: uppercase;
-      }
-      img {
-        opacity: 0;
-      }
-      span {
-        font-family: 'Coffekan';
-      }
-      /* Works on Firefox */
-      * {
-        scrollbar-width: thin;
-        scrollbar-color: #e69683 #ffcdbc;
-      }
-
-      /* Works on Chrome, Edge, and Safari */
-      *::-webkit-scrollbar {
-        width: 12px;
-      }
-
-      *::-webkit-scrollbar-track {
-        /* background: #fffefa; */
-        background: #ffcdbc;
-      }
-
-      *::-webkit-scrollbar-thumb {
-        /* background-color: #fffefa; */
-        background-color: #e69683;
-        border-radius: 20px;
-        border: 3px solid #e69683;
-      }
-      #container {
-        height: 100vh;
-        width: 100vw;
-        position: fixed;
-        z-index: -1;
-        top: 0;
-        left: 0;
-      }
-      .parent {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(12, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-      }
-
-      .div1 {
-        grid-area: 1 / 7 / 6 / 9;
-      }
-      .div2 {
-        grid-area: 1 / 1 / 6 / 3;
-      }
-      .div3 {
-        grid-area: 8 / 1 / 13 / 3;
-      }
-      .div4 {
-        grid-area: 8 / 7 / 13 / 9;
-      }
-      .div5 {
-        grid-area: 3 / 4 / 10 / 6;
-      }
-    </style>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main>
       <div data-scroll>
         <div class="page">
+          <div class="py-4 flex items-center justify-between">
+            <p class="text-4xl coffee uppercase font-semibold text-olivedark">
+              Home
+            </p>
+            <div class="coffee w-64 h-64 flex items-center justify-center">
+              <p class="text-2xl text-olivedark text-semibold">Ro</p>
+              <img class="object-cover" src="./img/a.webp" alt="" />
+              <p class="text-2xl text-olivedark text-semibold">se</p>
+            </div>
+            <p
+              class="
+                text-4xl
+                coffee
+                uppercase
+                font-bold
+                tracking-widest
+                text-olivedark
+              "
+            >
+              Visit
+            </p>
+          </div>
           <div class="main">
-            <h1>ROSELIARA</h1>
+            <h2 class="header magilio">ROSELIARA</h2>
             <h2>Oh, <span> we </span> have thoughts.</h2>
             <img src="img/flowers.png" alt="" />
           </div>
-          <div
-            class="min-h-screen flex items-center justify-center bg-yellow-300"
-          >
-            <div class="parent">
-              <div class="div1">
-                <img src="img/b.webp" alt="" />
-              </div>
-              <div class="div2">
-                <img src="img/flowers.png" alt="" />
-              </div>
-              <div class="div3">
-                <img src="img/d.webp" alt="" />
-              </div>
-              <div class="div4 w-full h-full">
-                <img src="img/a.webp" alt="" />
-              </div>
-              <div class="div5 w-full h-full">
-                <img src="img/c.webp" alt="" />
-              </div>
+
+          <div class="parent">
+            <div class="div1">
+              <img src="img/b.webp" alt="" />
             </div>
+            <div class="div2">
+              <img src="img/flowers.png" alt="" />
+            </div>
+            <div class="div3">
+              <img src="img/d.webp" alt="" />
+            </div>
+            <div class="div4 w-full h-full">
+              <img src="img/a.webp" alt="" />
+            </div>
+            <div class="div5 w-full h-full">
+              <img src="img/c.webp" alt="" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-5">
+            <div class="-mt-40">
+              <img src="/img/coupleA.webp" alt="" />
+            </div>
+            <div class="">
+              <img src="/img/coupleB.webp" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="my-20 py-40 shadow-sm rounded px-10"
+            style="
+              background: url('./img/c.webp');
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <h2 class="migha text-6xl font-semibold tracking-wide">
+              Because there should be joy in planning your wedding, we built a
+              modern and proven approach that puts
+              <span class="gilam"> love back </span>into the process. The
+              result?
+              <span class="colortube text-4xl"> A wedding </span>
+              that truly reflects who you are.
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 my-20">
+          <div
+            class="
+              flex flex-col
+              items-center
+              justify-center
+              bg-darkolive
+              text-white
+              space-y-10
+              py-40
+              px-10
+            "
+          >
+            <p class="text-5xl text-center">Love <span>the</span> process</p>
+            <p
+              class="
+                gilam
+                text-4xl text-4xl
+                leading-9
+                tracking-wide
+                font-semibold
+              "
+            >
+              Our method transforms the wedding planning experience from one
+              that’s historically dusty and static to one that’s agile, easy,
+              and vibrant. Our love of the process makes you the VIP, from the
+              first day of planning to the day of your celebration.
+            </p>
+            <button
+              class="
+                border-2 border-white
+                rounded
+                shadow-sm
+                py-1
+                px-3
+                uppercase
+                kenoky
+                tracking-widest
+                leading-9
+              "
+            >
+              Love it
+            </button>
+          </div>
+          <div
+            class="
+              bg-darkolive
+              flex flex-col
+              items-center
+              justify-center
+              text-white
+              space-y-10
+              py-40
+              relative
+              px-10
+            "
+          >
+            <img
+              class="absolute opacity-100 w-80 h-60 -top-16 left-0"
+              src="/img/a.webp"
+              alt=""
+            />
+            <p class="text-5xl text-center">Always <span>Dreamy</span></p>
+            <p class="gilam text-4xl leading-9 tracking-wide font-semibold">
+              Our celebrations are revered for their beauty and classic
+              timelessness. But what drives our work is commitment to
+              inclusivity, responsiveness, and delivering on what’s true to
+              you–in a way that never for a moment feels overwhelming.
+            </p>
+            <button
+              class="
+                border-2 border-white
+                rounded
+                shadow-sm
+                py-1
+                px-3
+                uppercase
+                kenoky
+                tracking-widest
+                leading-9
+              "
+            >
+              Dream it
+            </button>
+          </div>
+        </div>
+        <div class="py-20"></div>
+        <div class="container mx-auto">
+          <div class="grid grid-cols-4 gap-5">
+            <div class="-mt-40">
+              <img src="/img/coupleB.webp" alt="" />
+            </div>
+            <div class="">
+              <img src="/img/coupleF.webp" alt="" />
+            </div>
+            <div class="-mt-40">
+              <img src="/img/coupleC.webp" alt="" />
+            </div>
+            <div class="">
+              <img src="/img/coupleD.webp" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="min-h-screen flex items-center justify-center">
+          <div class="relative">
+            <p
+              class="
+                absolute
+                text-9xl
+                -left-60
+                font-semibold
+                text-olivedark
+                -top-40
+                magilio
+                uppercase
+                tracking-wide
+              "
+            >
+              The <span class="coffee"> yes </span>
+            </p>
+            <img src="/img/couple.jpg" alt="" />
           </div>
         </div>
       </div>
